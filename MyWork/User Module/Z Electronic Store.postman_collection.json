@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "44ebd4eb-e76f-4497-a32a-7cefc714818a",
+		"name": "Z Electronic Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13803805"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "GET USER DETAILS",
+					"item": [
+						{
+							"name": "Get All Users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9095/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9095/users/985cbe06-3d0b-46c4-93e2-e9ce7cb8d981",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"users",
+										"985cbe06-3d0b-46c4-93e2-e9ce7cb8d981"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By Email",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9095/users/email/lalit.modi@test.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"users",
+										"email",
+										"lalit.modi@test.com"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search By Keywords In Name",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9095/users/search/ank",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"users",
+										"search",
+										"ank"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search By Keywords In Any Field",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9095/users/search/ank",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9095",
+									"path": [
+										"users",
+										"search",
+										"ank"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ankit Patel\",\r\n  \"email\": \"ankitpatel@test.com\",\r\n  \"password\": \"abcd1234\",\r\n  \"gender\": \"Male\",\r\n  \"about\": \"I am learning\",\r\n  \"imageName\": \"test.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9095/users/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9095",
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Dhyana Patel\",\r\n  \"email\": \"dhyana@test.com\",\r\n  \"password\": \"abcd1234\",\r\n  \"gender\": \"female\",\r\n  \"about\": \"She is playing\",\r\n  \"imageName\": \"Dpatel.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9095/users/{userid}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9095",
+							"path": [
+								"users",
+								"{userid}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9095/users/85861b0d-b214-4134-b2e1-591c314e0607",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9095",
+							"path": [
+								"users",
+								"85861b0d-b214-4134-b2e1-591c314e0607"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
